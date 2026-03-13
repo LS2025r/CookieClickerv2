@@ -1,9 +1,47 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=Indie+Flower&family=Monoton&family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CookieClicker</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="game-content">
+      <section class="main-area">
+        <div class="stats">
+          <h1 id="cookie-count">0 Cookies</h1>
+          <p id="cookies-per-second">per sec: 0</p>
+        </div>
+        <div class="cookie-container">
+          <img
+            src="/img/cookiev3.png"
+            alt="Cookie"
+            id="cookie-button"
+            class="cookie-image"
+          />
+        </div>
+      </section>
+
+      <section class="shop-area">
+        <h2>Store</h2>
+        <div class="upgrade-list">
+          <button class="upgrade-item" id="buy-cursor">
+            <div class="upgrade-info">
+              <span class="name">Cursor</span>
+              <span class="cost">15 cookies</span>
+            </div>
+            <span class="count" id="grandma-count">0</span>
+          </button>
+        </div>
+      </section>
+    </div>
+  </body>
+  <script src="./script.js"></script>
 </html>

@@ -1,0 +1,116 @@
+body {
+  background-color: #f8b36b;
+  color: brown;
+  height: 100vh;
+  overflow: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.game-content {
+  display: flex;
+  height: 100%;
+}
+.main-area {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle, #f8b36b 0%, #976026 100%);
+  border-right: 6px solid #1a252f;
+}
+
+.stats {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#cookie-count {
+  font-size: 3rem;
+  text-shadow: 2px 2px #000;
+}
+
+.cookie-container {
+  position: relative;
+}
+
+.cookie-image {
+  width: 300px;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.cookie-image:active {
+  transform: scale(0.95);
+}
+
+.shop-area {
+  flex: 1;
+  background: #f8b36b;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.shop-area h2 {
+  text-align: center;
+  border-bottom: 2px solid #000;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.upgrade-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.upgrade-item {
+  background-color: #db954b;
+  border: 2px solid #976026;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.2s;
+  border-radius: 8px;
+}
+
+.upgrade-item:hover {
+  background: #976026;
+}
+
+.upgrade-item:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.upgrade-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.cost {
+  color: white;
+  font-size: 0.9rem;
+}
+
+.count {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.3);
+}
