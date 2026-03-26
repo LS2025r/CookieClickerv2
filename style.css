@@ -100,17 +100,21 @@ body {
   align-items: flex-start;
 }
 
-.name {
+.name,
+.name-db {
   font-weight: bold;
   font-size: 1.1rem;
 }
 
-.cost {
+.cost,
+.cost-db {
   color: white;
   font-size: 0.9rem;
 }
 
-.count {
+.count,
+#grandma-count,
+#double-cookie-count {
   font-size: 1.5rem;
   color: rgba(255, 255, 255, 0.3);
 }
