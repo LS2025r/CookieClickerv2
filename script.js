@@ -12,10 +12,18 @@ const upgradeButton = document.querySelector("#buy-cursor");
 const upgradeNumber = document.querySelector("#grandma-count");
 const doubleButton = document.querySelector("#buy-double-cookie");
 const doubleNumber = document.querySelector("#double-cookie-count");
+const goldenCookie = document.getElementById("golden-cookie");
 
 cookieButton.addEventListener("click", () => {
   cookies += getCookies;
   cookieCount.textContent = cookies;
+});
+
+window.addEventListener("keydown", (event) => {
+  if ((event.code = "Space")) {
+    cookies += getCookies;
+    cookieCount.textContent = cookies;
+  }
 });
 
 upgradeButton.addEventListener("click", () => {
@@ -31,6 +39,32 @@ upgradeButton.addEventListener("click", () => {
   } else {
     alert("Not Enough Cookies");
   }
+});
+
+setInterval(() => {
+  if (Math.random() < 0.3) {
+    spawnGoldenCookie();
+  }
+});
+
+function spawnGoldenCookie() {
+  const x = Math.random() * (window.innerWidth - 100);
+  const y = Math.random() * (window.innerHeight - 100);
+
+  goldenCookie.style.left = x + "px";
+  goldenCookie.style.top = x + "px";
+
+  goldenCookie.classList.remove("hidden-cookies");
+
+  setTimeout(() => {
+    goldenCookie.classList.add("hidden-cookie");
+  }, 5000);
+}
+
+goldenCookie.addEventListener("click", (event) => {
+  cookies += 500;
+  goldenCookie.classList.add("hidden-cookie");
+  console.log("test dziala");
 });
 
 doubleButton.addEventListener("click", () => {
